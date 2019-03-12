@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=kum
+Comment=kum P2P Cryptocurrency
+Exec=kum-qt %u
+Terminal=false
+Type=Application
+Icon=kum128
+MimeType=x-scheme-handler/kum;
+Categories=Office;Finance;
+Name[it]=kum-qt.desktop

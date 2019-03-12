@@ -1,0 +1,26 @@
+[Unit]
+Description=kum's distributed currency daemon
+After=network.target
+
+[Service]
+User=kum
+Group=kum
+
+Type=forking
+PIDFile=/var/lib/kumd/kumd.pid
+
+ExecStart=/usr/bin/kumd -daemon -pid=/var/lib/kumd/kumd.pid \
+          -conf=/etc/kum/kum.conf -datadir=/var/lib/kumd
+
+ExecStop=-/usr/bin/kum-cli -conf=/etc/kum/kum.conf \
+         -datadir=/var/lib/kumd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
