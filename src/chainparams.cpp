@@ -379,7 +379,7 @@ public:
         pchMessageStart[3] = 0xe9;
         vAlertPubKey = ParseHex("036fde249ba219d1682f77afd4c8c07ccb0b423d2655e864d5a2a73b2e1dd09fe4");
 
-        nDefaultPort = 50221;
+        nDefaultPort = 52552;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Krium starting difficulty is the lowest possible 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
